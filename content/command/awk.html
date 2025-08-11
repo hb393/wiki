@@ -1,0 +1,17 @@
+<h3>区切り文字をスペースで指定して1カラム目を抜き出す。</h3>
+    <p>awk -F " " '{print $1}'</p><br>
+
+    <h3>特定の文字列の前に空白行を入れる</h3>
+    <p>行頭が Name: または Namespace: または containerd: に一致したら、その行を出力。さらに containerd: の場合は空行も追加</p>
+    <p>awk 'BEGIN {IGNORECASE=1}
+        /^Name:/ || /^Namespace:/ || /^containerd:/ {
+        print $0
+        if(/^containerd:/) {
+        print ""
+        }
+        }' input.txt
+    </p><br>
+    <h3>ワンライナー</h3>
+    <p>awk 'BEGIN{IGNORECASE=1} /^Name:/||/^Namespace:/||/^containerd:/{print; if(/^containerd:/) print ""}' input.txt
+    </p><br>
+    <p><a href="../content.html">ひとつ前へ</a></p>

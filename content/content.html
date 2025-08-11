@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contetn</title>
+</head>
+
+<body>
+    <h1>コマンド</h1>
+    <h2>awk</h2>
+    <p>指定した方法でテキスト処理に有利なコマンド。プログラミングっぽく書くこともできる。</p>
+    <p><a href="command/awk.html">実行例</a></p>
+
+    <table border="1">
+        <tr>
+            <th>オプション</th>
+            <th>意味</th>
+        </tr>
+
+        <tr>
+            <td>-F</td>
+            <td>区切り文字を指定</td>
+        </tr>
+
+        <tr>
+            <td>-f</td>
+            <td>ファイルを指定</td>
+        </tr>
+
+        <tr>
+            <td>-v</td>
+            <td>プログラムから参照可能な変数を引数で指定</td>
+        </tr>
+    </table><br>
+
+
+    <h2>df</h2>
+    <p>ディスク情報確認</p>
+    <p><a href="command/df.html">実行例</a></p>
+
+
+    <table border="1">
+        <tr>
+            <th>オプション</th>
+            <th>意味</th>
+        </tr>
+
+        <tr>
+            <td>-h</td>
+            <td>読みやすい単位で出力</td>
+        </tr>
+
+        <tr>
+            <td>-a</td>
+            <td>ダミーファイルも含めて表示</td>
+        </tr>
+
+        <tr>
+            <td>-l</td>
+            <td>ローカルファイルシステムのみ表示</td>
+        </tr>
+    </table><br>
+
+    <h2>du</h2>
+    <p>ディスク使用量を確認</p>
+    <p><a href="command/du.html">実行例</a></p>
+
+    <table border="1">
+        <tr>
+            <th>オプション</th>
+            <th>意味</th>
+        </tr>
+
+        <tr>
+            <td>-a</td>
+            <td>ディレクトリ内のファイル容量も表示</td>
+        </tr>
+
+        <tr>
+            <td>-s</td>
+            <td>サブディレクトリ含めた合計サイズを表示</td>
+        </tr>
+
+        <tr>
+            <td>-S</td>
+            <td>サブディレクトリのサイズを含めないで表示</td>
+        </tr>
+
+        <tr>
+            <td>-b</td>
+            <td>容量をバイト単位で表示</td>
+        </tr>
+    </table><br>
+
+
+    <h2>sar</h2>
+    <p>統計情報を表示</p>
+    <p><a href="command/sar.html">実行例</a></p>
+    <table border="1">
+        <tr>
+            <th>オプション</th>
+            <th>意味</th>
+        </tr>
+
+        <tr>
+            <td>-A</td>
+            <td>すべての項目を表示</td>
+        </tr>
+
+        <tr>
+            <td>-b</td>
+            <td>ディスクの入出力と転送レート情報を表示する</td>
+        </tr>
+
+        <tr>
+            <td>-c</td>
+            <td>プロセスの生成回数を表示する</td>
+        </tr>
+
+        <tr>
+            <td>-f</td>
+            <td>ファイルを指定する</td>
+        </tr>
+
+        <tr>
+            <td>-n DEV</td>
+            <td>ネットワーク情報を表示</td>
+        </tr>
+
+        <tr>
+            <td>-r</td>
+            <td>メモリとスワップ情報表示</td>
+        </tr>
+
+        <tr>
+            <td>-u</td>
+            <td>CPU情報表示(iostatとのCPUと同じ)</td>
+        </tr>
+
+        <tr>
+            <td>-P id | ALL</td>
+            <td>CPUごとの情報を表示</td>
+        </tr>
+
+        <tr>
+            <td>-R</td>
+            <td>メモリの統計情報を表示</td>
+        </tr>
+
+        <tr>
+            <td>-W</td>
+            <td>スワップ情報表示</td>
+        </tr>
+    </table><br>
+
+<h2>vmstat</h2>
+<p>オプションなし</p>
+<p><a href="command/vmstat.html">実行例</a></p>
+
+</table>
+    <table border="1">
+        <tr>
+            <th>表示項目</th>
+            <th>列</th>
+            <th>説明</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">procs</td>
+            <td>r</td>
+            <td>実行待ちプロセス数</td>
+        </tr>
+        
+        <tr>
+            <td>b</td>
+            <td>割り込み不可能なスリープ状態にあるプロセス数</td>
+        </tr>
+
+        <tr>
+            <td rowspan="4">memory</td>
+            <td>swapd</td>
+            <td>スワップサイズ(KB)</td>
+        </tr>
+
+        <tr>
+            <td>free</td>
+            <td>空きメモリサイズ(KB)</td>
+        </tr>
+
+        <tr>
+            <td>buff</td>
+            <td>バッファに割り当てられているメモリサイズ(KB)</td>
+        </tr>
+
+        <tr>
+            <td>cache</td>
+            <td>キャッシュに割り当てられているメモリサイズ(KB)</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">swap</td>
+            <td>si</td>
+            <td>ディスクからスワップインされているメモリサイズ(KB/秒)</td>
+        </tr>
+
+        <tr>
+            <td>so</td>
+            <td>ディスクへスワップアウトされているメモリサイズ(KB/秒)</td>
+        </tr>
+        </table><br>
+
+        <h2>diff</h2>
+        <p>ファイルの差分を比較</p>
+        <p><a href="command/diff.html">実行例</a></p>
+        <table border="1">
+            <tr>
+                <th>オプション</th>
+                <th>意味</th>
+            </tr>
+
+            <tr>
+                <td>-i</td>
+                <td>大文字と小文字を無視</td>
+            </tr>
+
+            <tr>
+                <td>-b</td>
+                <td>スペースの数だけ異なる場合は違いを無視</td>
+            </tr>
+
+            <tr>
+                <td>-E</td>
+                <td>タブ展開によるスペースの変更を無視</td>
+            </tr>
+
+            <tr>
+                <td>-w</td>
+                <td>空白を無視して比較</td>
+            </tr>
+
+            <tr>
+                <td>-q</td>
+                <td>ファイルが違うかどうかだけを出力する</td>
+            </tr>
+        </table><br>
+
+
+                <h2>free</h2>
+        <p>メモリ情報を表示</p>
+        <p><a href="command/memory.html">実行例</a></p>
+        <table border="1">
+            <tr>
+                <th>オプション</th>
+                <th>意味</th>
+            </tr>
+
+            <tr>
+                <td>-b</td>
+                <td>バイト単位で表示</td>
+            </tr>
+
+            <tr>
+                <td>-k</td>
+                <td>KB単位で表示</td>
+            </tr>
+
+            <tr>
+                <td>-m</td>
+                <td>MB単位で表示</td>
+            </tr>
+
+            <tr>
+                <td>-t</td>
+                <td>物理メモリとスワップメモリの合計行も表示</td>
+            </tr>
+
+            <tr>
+                <td>-0</td>
+                <td>バッファを増減した行を表示しない</td>
+            </tr>
+
+            <tr>
+                <td>-s</td>
+                <td>繰り返し実行する間隔(秒)</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+    
+    <p><a href="../index.html">topへ</a></p>
+
+</body>
+
+</html>
