@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="js">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -9,46 +9,420 @@
 </head>
 
 <body>
-    <h1 class="title">Wiliっぽいもの</h1>
 
-    <div class="contents">
-    <h2 class="title">コマンド</h2>
-    
-        <ul class="contents_ul">
-            <li><a href="content/content.html#awk">awk</li>
-            <li><a href="content/content.html#df">df</a></li>
-            <li><a href="content/content.html#du">du</a></li>
-            <li><a href="content/content.html#sar">sar</a></li>
-            <li><a href="content/content.html#vmstat">vmstat</a></li>
-            <li><a href="content/content.html#diff">diff</a></li>
-            <li><a href="content/content.html#free">free</a></li>
-            <li><a href="content/content.html#ps">ps</a></li>
-        </ul>
-
-        <h2 class="title">サービス</h2>
-        <ul class="contents_ul">
-            <li><a href="contetn2.html">DNS</a></li>
-            <li><a href="contetn2.html">ssl</a></li>
-            <li><a href="contetn2.html">kubectl</a></li>
-            <li><a href="contetn2.html">sql</a></li>
-            <li><a href="contetn2.html">zabbix</a></li>
-        </ul>
+    <header>
+        <h1 id="title">Wiliっぽいもの</h1>
+    </header>
 
 
-        <h2 class="title">その他</h2>
-        <ul class="contents_ul">
-            <li><a href="conetnt/content3html">api</a></li>
-            <li><a href="content/content3.html">systemctl</a></li>
-            <li><a href="content/content3.html">ip</a></li>
-            <li><a href="content/content3.html">sftp</a></li>
-            <li><a href="content/content3.html">jq</a></li>
-        </ul>
-    </div>
+    <div class="content">
+        <nav class="contents_list">
+            <h2 class="title">コマンド</h2>
 
-    <p></p>
+            <ul class="contents_ul">
+                <li><a href="#awk">awk</a></li>
+                <li><a href="#df">df</a></li>
+                <li><a href="#du">du</a></li>
+                <li><a href="#sar">sar</a></li>
+                <li><a href="#vmstat">vmstat</a></li>
+                <li><a href="#diff">diff</a></li>
+                <li><a href="#free">free</a></li>
+                <li><a href="#ps">ps</a></li>
+            </ul>
+
+            <h2 class="title">サービス</h2>
+            <ul class="contents_ul">
+                <li><a href="contetn2.html">DNS</a></li>
+                <li><a href="contetn2.html">ssl</a></li>
+                <li><a href="contetn2.html">kubectl</a></li>
+                <li><a href="contetn2.html">sql</a></li>
+                <li><a href="contetn2.html">zabbix</a></li>
+            </ul>
 
 
+            <h2 class="title">その他</h2>
+            <ul class="contents_ul">
+                <li><a href="conetnt/content3html">api</a></li>
+                <li><a href="content/content3.html">systemctl</a></li>
+                <li><a href="content/content3.html">ip</a></li>
+                <li><a href="content/content3.html">sftp</a></li>
+                <li><a href="content/content3.html">jq</a></li>
+            </ul>
+        </nav>
 
-</body>
+
+        <section class="contents_detail">
+
+
+            <div class="box">
+                <h2 id="awk">awk</h2>
+                <p>指定した方法でテキスト処理に有利なコマンド。プログラミングっぽく書くこともできる。</p>
+                <p><a href="command/awk.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-F</td>
+                            <td>区切り文字を指定</td>
+                        </tr>
+                        <tr>
+                            <td>-f</td>
+                            <td>ファイルを指定</td>
+                        </tr>
+                        <tr>
+                            <td>-v</td>
+                            <td>プログラムから参照可能な変数を引数で指定</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="df">df</h2>
+                <p>ディスク情報確認</p>
+                <p><a href="command/df.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-h</td>
+                            <td>読みやすい単位で出力</td>
+                        </tr>
+                        <tr>
+                            <td>-a</td>
+                            <td>ダミーファイルも含めて表示</td>
+                        </tr>
+                        <tr>
+                            <td>-l</td>
+                            <td>ローカルファイルシステムのみ表示</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="du">du</h2>
+                <p>ディスク使用量を確認</p>
+                <p><a href="command/du.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-a</td>
+                            <td>ディレクトリ内のファイル容量も表示</td>
+                        </tr>
+                        <tr>
+                            <td>-s</td>
+                            <td>サブディレクトリ含めた合計サイズを表示</td>
+                        </tr>
+                        <tr>
+                            <td>-S</td>
+                            <td>サブディレクトリのサイズを含めないで表示</td>
+                        </tr>
+                        <tr>
+                            <td>-b</td>
+                            <td>容量をバイト単位で表示</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="sar">sar</h2>
+                <p>統計情報を表示</p>
+                <p><a href="command/sar.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-A</td>
+                            <td>すべての項目を表示</td>
+                        </tr>
+                        <tr>
+                            <td>-b</td>
+                            <td>ディスクの入出力と転送レート情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td>-c</td>
+                            <td>プロセスの生成回数を表示する</td>
+                        </tr>
+                        <tr>
+                            <td>-f</td>
+                            <td>ファイルを指定する</td>
+                        </tr>
+                        <tr>
+                            <td>-n DEV</td>
+                            <td>ネットワーク情報を表示</td>
+                        </tr>
+                        <tr>
+                            <td>-r</td>
+                            <td>メモリとスワップ情報表示</td>
+                        </tr>
+                        <tr>
+                            <td>-u</td>
+                            <td>CPU情報表示(iostatとのCPUと同じ)</td>
+                        </tr>
+                        <tr>
+                            <td>-P id | ALL</td>
+                            <td>CPUごとの情報を表示</td>
+                        </tr>
+                        <tr>
+                            <td>-R</td>
+                            <td>メモリの統計情報を表示</td>
+                        </tr>
+                        <tr>
+                            <td>-W</td>
+                            <td>スワップ情報表示</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="vmstat">vmstat</h2>
+                <p>オプション 数字で指定
+                <p>第1引数何秒ごとに実行するか</p>
+                <p>第2引数何回実行するか</p>
+                <p><a href="command/vmstat.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>表示項目</th>
+                            <th>列</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">procs</td>
+                            <td>r</td>
+                            <td>実行待ちプロセス数</td>
+                        </tr>
+                        <tr>
+                            <td>b</td>
+                            <td>割り込み不可能なスリープ状態にあるプロセス数</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">memory</td>
+                            <td>swapd</td>
+                            <td>スワップサイズ(KB)</td>
+                        </tr>
+                        <tr>
+                            <td>free</td>
+                            <td>空きメモリサイズ(KB)</td>
+                        </tr>
+                        <tr>
+                            <td>buff</td>
+                            <td>バッファに割り当てられているメモリサイズ(KB)</td>
+                        </tr>
+                        <tr>
+                            <td>cache</td>
+                            <td>キャッシュに割り当てられているメモリサイズ(KB)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">swap</td>
+                            <td>si</td>
+                            <td>ディスクからスワップインされているメモリサイズ(KB/秒)</td>
+                        </tr>
+                        <tr>
+                            <td>so</td>
+                            <td>ディスクへスワップアウトされているメモリサイズ(KB/秒)</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="diff">diff</h2>
+                <p>ファイルの差分を比較</p>
+                <p><a href="command/diff.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-i</td>
+                            <td>大文字と小文字を無視</td>
+                        </tr>
+                        <tr>
+                            <td>-b</td>
+                            <td>スペースの数だけ異なる場合は違いを無視</td>
+                        </tr>
+                        <tr>
+                            <td>-E</td>
+                            <td>タブ展開によるスペースの変更を無視</td>
+                        </tr>
+                        <tr>
+                            <td>-w</td>
+                            <td>空白を無視して比較</td>
+                        </tr>
+                        <tr>
+                            <td>-q</td>
+                            <td>ファイルが違うかどうかだけを出力する</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="free">free</h2>
+                <p>メモリ情報を表示</p>
+                <p><a href="command/memory.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-b</td>
+                            <td>バイト単位で表示</td>
+                        </tr>
+                        <tr>
+                            <td>-k</td>
+                            <td>KB単位で表示</td>
+                        </tr>
+                        <tr>
+                            <td>-m</td>
+                            <td>MB単位で表示</td>
+                        </tr>
+                        <tr>
+                            <td>-t</td>
+                            <td>物理メモリとスワップメモリの合計行も表示</td>
+                        </tr>
+                        <tr>
+                            <td>-0</td>
+                            <td>バッファを増減した行を表示しない</td>
+                        </tr>
+                        <tr>
+                            <td>-s</td>
+                            <td>繰り返し実行する間隔(秒)</td>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </div>
+
+
+            <div class="box">
+                <h2 id="ps">ps</h2>
+                <p>プロセス単位のCPU使用率</p>
+                <p><a href="command/ps.html">実行例</a></p>
+                <table class="cmd-table">
+                    <thead>
+                        <tr>
+                            <th>オプション</th>
+                            <th>意味</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>a</td>
+                            <td>端末上のすべてのプロセスを表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>e</td>
+                            <td>環境変数も表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>x</td>
+                            <td>制御端末のないプロセスも表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>u</td>
+                            <td>実行ユーザ名なども表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>r</td>
+                            <td>実行中のプロセスのみを表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>l</td>
+                            <td>長いフォーマットで表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>U ユーザ名</td>
+                            <td>ユーザ名で選択する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-C コマンド名</td>
+                            <td>コマンド名で選択する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-e</td>
+                            <td>すべてのプロセスを表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-f</td>
+                            <td>引数等も含めた完全なフォーマットで表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-l</td>
+                            <td>ロング形式で表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-p PID</td>
+                            <td>PIDで表示する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-t tty</td>
+                            <td>端末名で選択する</td>
+                        </tr>
+
+                        <tr>
+                            <td>-u UID</td>
+                            <td>ユーザIDで選択する</td>
+                        </tr>
+                    </tbody>
+                </table> <br>
+            </div>
+
+
+        </section>
 
 </html>
