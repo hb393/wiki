@@ -12,13 +12,14 @@
 
     <div class="wrapper">
         <header>
-            <h1 id="title">Wiliっぽいもの</h1>
+            <h1>メモ</h1>
         </header>
 
 
         <div class="content">
             <nav class="contents_list">
-                <h2 class="title">コマンド</h2>
+                <h2>リスト</h2>
+                <h4 class="title" id="cmd">コマンド</h4>
 
                 <ul class="contents_ul">
                     <li><a href="#awk">awk</a></li>
@@ -31,7 +32,7 @@
                     <li><a href="#ps">ps</a></li>
                 </ul>
 
-                <h2 class="title">サービス</h2>
+                <h4 class="title" id="service">サービス</h4>
                 <ul class="contents_ul">
                     <li><a href="content2.html">DNS</a></li>
                     <li><a href="content2.html">ssl</a></li>
@@ -41,7 +42,7 @@
                 </ul>
 
 
-                <h2 class="title">その他</h2>
+                <h4 class="title" id="other">その他</h4>
                 <ul class="contents_ul">
                     <li><a href="conetnt/content3html">api</a></li>
                     <li><a href="content/content3.html">systemctl</a></li>
@@ -53,11 +54,12 @@
 
 
             <article class="box">
+                <h2>コマンド</h2>
                 <section id="awk">
-                    <h2>awk</h2>
+                    <p class="boxtop">awk</p>
                     <details>
                         <summary>
-                            テキスト処理を処理できる。
+                            テキストを処理できる
                         </summary>
                         <p><a href="command/awk.html">実行例</a></p>
                         <table class="cmd-table">
@@ -86,7 +88,7 @@
                 </section>
 
                 <section id="df">
-                    <h2>df</h2>
+                    <p class="boxtop">df</p>
                     <details>
                         <summary>
                             ディスク情報を確認できる
@@ -118,7 +120,7 @@
                 </section>
 
                 <section id="du">
-                    <h2>du</h2>
+                    <p class="boxtop">du</p>
                     <details>
                         <summary>
                             ディスク使用量を確認できる
@@ -154,7 +156,7 @@
                 </section>
 
                 <section id="sar">
-                    <h2>sar</h2>
+                    <p class="boxtop">sar</p>
                     <details>
                         <summary>
                             HWに対するアクセスの統計情報を表示できる
@@ -215,10 +217,10 @@
 
                 <section id="vmstat">
 
-                    <h2>vmstat</h2>
+                    <p class="boxtop">vmstat</p>
                     <details>
                         <summary>
-                            ディスク、メモリへの読み書き、スワップの読み書きの統計情報を確認できる。オプショは数字で指定
+                            ディスク、メモリへの読み書き、スワップの読み書きの統計情報を確認できる。オプションは数字で指定
                         </summary>
                         <p>第1引数何秒ごとに実行するか</p>
                         <p>第2引数何回実行するか</p>
@@ -273,7 +275,7 @@
                 </section>
 
                 <section id="diff">
-                    <h2>diff</h2>
+                    <p class="boxtop">diff</p>
                     <details>
                         <summary>
                             ファイルの差分を比較できる
@@ -313,7 +315,7 @@
                 </section>
 
                 <section id="free">
-                    <h2>free</h2>
+                    <p class="boxtop">free</p>
                     <details>
                         <summary>
                             メモリ使用情報を表示できる
@@ -357,7 +359,7 @@
                 </section>
 
                 <section id="ps">
-                    <h2>ps</h2>
+                    <p class="boxtop">ps</p>
                     <details>
                         <summary>
                             プロセス単位のCPU使用率を表示できる
